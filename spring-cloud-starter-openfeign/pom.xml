@@ -5,8 +5,8 @@
 	<parent>
 		<groupId>org.springframework.cloud</groupId>
 		<artifactId>spring-cloud-openfeign</artifactId>
-		<version>2.1.6.BUILD-SNAPSHOT</version>
-		<relativePath>..</relativePath>
+		<version>${spring-cloud-openfeign-version}</version>
+		<relativePath>../pom.xml</relativePath>
 	</parent>
 	<artifactId>spring-cloud-starter-openfeign</artifactId>
 	<name>Spring Cloud Starter OpenFeign</name>
