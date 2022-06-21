@@ -25,6 +25,7 @@ import org.springframework.core.io.ResourceLoader;
 import org.springframework.core.type.AnnotationMetadata;
 import org.springframework.core.type.filter.AnnotationTypeFilter;
 import org.springframework.stereotype.Component;
+import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;
 import org.springframework.util.StringUtils;
 
@@ -115,12 +116,10 @@ public class RpcReferencesRegistrar
 			// fetch from MANIFEST.MF
 			feignClientName = CommonUtils.getAppNameFromJarFile(fieldType);
 		}
-		if (feignClientName == null || "".equals(feignClientName)) {
-			throw new IllegalStateException(
-					"can not resolve feign client name from either the name/value property of "
-							+ RpcReference.class
-							+ " or the App-Name entry of the rpc JarFile MANIFEST.MF");
-		}
+		Assert.hasText(feignClientName,
+				"can not resolve feign client name from either the name/value property of "
+						+ RpcReference.class
+						+ " or the App-Name entry of the rpc JarFile MANIFEST.MF");
 		definition.addPropertyValue("name", resolve(feignClientName));
 		definition.addPropertyValue("url", resolve(rpcReference.url()));
 		definition.addPropertyValue("path", resolve(rpcReference.path()));

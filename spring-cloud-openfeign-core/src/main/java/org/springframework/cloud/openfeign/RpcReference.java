@@ -13,7 +13,8 @@ import org.springframework.core.annotation.AliasFor;
  *
  * @author xiaojiang.lxj at 2022-06-14 14:22.
  */
-@Target({ ElementType.METHOD, ElementType.FIELD, ElementType.ANNOTATION_TYPE })
+@Target({ ElementType.CONSTRUCTOR, ElementType.METHOD, ElementType.PARAMETER,
+		ElementType.FIELD, ElementType.ANNOTATION_TYPE })
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Autowired
