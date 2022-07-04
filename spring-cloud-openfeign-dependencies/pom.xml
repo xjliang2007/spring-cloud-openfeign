@@ -162,4 +162,15 @@
 			</pluginRepositories>
 		</profile>
 	</profiles>
+
+	<distributionManagement>
+		<repository>
+			<id>maven-aistarfish-dev-release</id>
+			<url>http://mvn-dev.aistarfish.net/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>maven-aistarfish-dev-snapshot</id>
+			<url>http://mvn-dev.aistarfish.net/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 </project>

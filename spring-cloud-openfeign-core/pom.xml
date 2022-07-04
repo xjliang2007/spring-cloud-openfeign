@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.cloud</groupId>
 		<artifactId>spring-cloud-openfeign</artifactId>
-		<version>${spring-cloud-openfeign-version}</version>
+		<version>${revision}</version>
 		<relativePath>../pom.xml</relativePath> <!-- lookup parent from repository -->
 	</parent>
 	<artifactId>spring-cloud-openfeign-core</artifactId>
@@ -92,7 +92,6 @@
 		<dependency>
 			<groupId>io.github.openfeign</groupId>
 			<artifactId>feign-core</artifactId>
-			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>io.github.openfeign.form</groupId>
